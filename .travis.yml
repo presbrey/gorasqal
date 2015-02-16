@@ -1,0 +1,7 @@
+language: go
+go: 1.4.1
+before_install:
+ - sudo apt-get update -qq
+ - sudo apt-get install -qq librasqal3-dev
+install: go get -u github.com/presbrey/goraptor
+script: go test -v .
